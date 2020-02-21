@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+html, body {
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.right-col {
+    background-color: rgb(49, 123, 126);
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.left-col {
+    background-color: rgb(47, 95, 97);
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+@media all and (min-width:1000px){
+    
+    .right-col {
+        width: 80%;
+        height: 100%;
+        overflow: auto;
+    }
+    
+    .left-col {
+        height: 100%;
+        width: 20%;
+        overflow: auto;
+    }
+    img{
+        max-width: 760px;
+    }
+  }
+
+
+@media all and (min-width:760px) and (max-width:1000px){
+  
+    .right-col {
+        max-width: 760px
+    }
+    
+    .left-col {
+        height: 40%;
+        width: 100%;
+    }
+
+    img{
+        max-width: 760px;
+    }
+  }
+
+@media all and (max-width:760px){
+    .right-col {
+        max-width: 760px;
+    }
+
+    .left-col {
+        height: 40%;
+        width: 100%;
+        max-width: 760px
+    }
+    img{
+        max-width: 400px;
+    }
+  }
+

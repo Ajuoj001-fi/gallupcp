@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="left-col"> <!-- ensimmäinen näkymä, left-col-->
+        <h2>Gallup controlpanel</h2>
+        <div class="d-flex justify-content-center">
+            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                <button routerLink ="/logged" class="btn btn-primary mt-4">Palaa</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-col d-flex justify-content-center"> <!-- right-col -->
+
+        <table class="table table-sm table-hover table-dark">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">
+                    Id
+                </th>
+                <th scope="col">
+                    Kysymys
+                </th>
+                <th scope="col">
+                    Aktiivinen
+                </th>
+                <th scope="col">
+                    Aloitus - lopetus
+                </th>
+                <th scope="col">
+                    
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let question of gallup.gallups">
+                <td scope="col">
+                    {{question.id}}
+                </td>
+                <td scope="col">
+                    {{question.question}}
+                </td>
+                <td scope="col">
+                    <div class="alert alert-success" *ngIf="question.active == 1">Aktiivinen</div>
+                    <button class="btn btn-primary mt-3" *ngIf="question.active == 0" (click)="gallup.changeActive(question.id)">Aseta aktiiviseksi</button>
+                </td>                
+                <td scope="col">
+                    {{question.startDate}} - {{question.endDate}}
+                </td>
+                <td scope="col">
+                  <button (click)="gallup.deleteQuestion(question.id)" class="btn btn-primary mb-1" *ngIf="question.active != 1">Poista</button>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+    </div>
+</div>

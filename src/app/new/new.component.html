@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="left-col"> <!-- ensimmäinen näkymä, left-col-->
+        <h2>Gallup controlpanel</h2>
+        <div class="d-flex justify-content-center">
+            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                <button routerLink ="/logged" class="btn btn-primary mt-4">Palaa</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-col d-flex justify-content-center"> <!-- right-col -->
+
+        <form >
+            <div class="form-group">
+                <label for="question">Kysymys?</label>
+                <input type="text" placeholder="Vähintään 6-merkkiä" class="form-control" id="question" required minlength="6" [(ngModel)]="new.question" name="question" #question="ngModel">
+            </div>
+                <div *ngIf="question.invalid && (question.touched)" class="alert alert-danger">
+                    <div *ngIf="question.errors.minlength || question.errors">
+                        Pituus ei riitä!
+                    </div>
+                </div>
+
+            <div class="form-group">
+                <label for="answer1">Vastausvaihtoehto 1</label>
+                <input type="text" placeholder="Vaaditaan" class="form-control" id="answer1" required [(ngModel)]="new.ans1" name="ans1" #ans1="ngModel">
+            </div>
+            <div *ngIf="ans1.invalid && (ans1.touched)" class="alert alert-danger">
+                <div *ngIf="ans1.errors">
+                    Vaaditaan!
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label for="answer2">Vastausvaihtoehto 2</label>
+                <input type="text" placeholder="Vaaditaan" class="form-control" id="answer2" required [(ngModel)]="new.ans2" name="ans2" #ans2="ngModel">
+            </div>
+
+            <div *ngIf="ans2.invalid && (ans2.touched)" class="alert alert-danger">
+                <div *ngIf="ans2.errors">
+                    Vaaditaan!
+                </div>
+            </div>
+
+            <div class="form-group" >
+                <label for="answer3">Vastausvaihtoehto 3, ei vaadita</label>
+                <input type="text" class="form-control" id="answer3" name="answer3" [(ngModel)]="new.ans3">
+            </div>
+
+            <div class="form-group">
+                <label for="startdate">Alkamispäivä, ei vaadita</label>
+                <input type="date" class="form-control" id="startdate" placeholder="DD-MM-YYYY" name="startdate" [(ngModel)]="new.startDate"> 
+            </div>
+
+            <div class="form-group">
+                <label for="enddate">Loppumispäivä, ei vaadita</label>
+                <input type="date" class="form-control" id="enddate" placeholder="DD-MM-YYYY" name="enddate" [(ngModel)]="new.endDate">
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="active" name="active" [(ngModel)]="new.active">
+                <label class="form-check-label" for="active">Aseta aktiiviseksi?</label>
+            </div>
+
+            <button class="btn btn-primary mt-3" (click)="aseta()" *ngIf="!question.errors && !ans1.errors && !ans2.errors">Lisää uusi</button>
+        </form>
+    </div>
+</div>
