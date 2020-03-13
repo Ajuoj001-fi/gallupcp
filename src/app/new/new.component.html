@@ -1,16 +1,22 @@
 <div class="row">
-    <div class="left-col"> <!-- ensimmäinen näkymä, left-col-->
-        <h2>Gallup controlpanel</h2>
-        <div class="d-flex justify-content-center">
-            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                <button routerLink ="/logged" class="btn btn-primary mt-4">Palaa</button>
+    <div class="col-12"> 
+        <form class="navbar align-left" style="width: 100%;"> 
+            
+            <div class="form-row align-items-left">
+                <div style="width: 100%;">
+                    <h2>Gallup - hallintapaneeli</h2>
+                </div>
+                <div>
+                    <button routerLink ="/logged" class="btn btn-primary mt-4">Palaa</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
+</div>
+<div class="row">
+    <div class="col-12">
 
-    <div class="right-col d-flex justify-content-center"> <!-- right-col -->
-
-        <form >
+        <form style="width: 50%; margin:0 auto;">
             <div class="form-group">
                 <label for="question">Kysymys?</label>
                 <input type="text" placeholder="Vähintään 6-merkkiä" class="form-control" id="question" required minlength="6" [(ngModel)]="new.question" name="question" #question="ngModel">

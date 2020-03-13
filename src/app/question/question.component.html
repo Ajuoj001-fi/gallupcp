@@ -1,14 +1,20 @@
 <div class="row">
-    <div class="left-col"> <!-- ensimmäinen näkymä, left-col-->
-        <h2>Gallup controlpanel</h2>
-        <div class="d-flex justify-content-center">
-            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                <button routerLink ="/logged" class="btn btn-primary mt-4">Palaa</button>
+    <div class="col-12"> 
+        <form class="navbar align-left" style="width: 100%;"> 
+            
+            <div class="form-row align-items-left">
+                <div style="width: 100%;">
+                    <h2>Gallup - hallintapaneeli</h2>
+                </div>
+                <div>
+                    <button routerLink ="/logged" class="btn btn-primary mt-4">Palaa</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
-
-    <div class="right-col d-flex justify-content-center"> <!-- right-col -->
+</div>
+<div class="row">
+    <div class="col-12">
 
         <table class="table table-sm table-hover table-dark">
             <thead class="thead-dark">

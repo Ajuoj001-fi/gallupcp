@@ -1,28 +1,42 @@
 <div class="row">
-    <div class="left-col"> <!-- ensimmäinen näkymä, left-col-->
-        <h2>Gallup controlpanel</h2>
-        <div class="d-flex justify-content-center">
-            <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                <button routerLink ="/new" class="btn btn-primary mt-4">Lisää uusi kysely</button>
-                <button routerLink ="/questions" class="btn btn-primary mt-4">Hallitse kyselyitä</button>
-                <button routerLink ="/" class="btn btn-primary mt-4">Kirjaudu ulos</button>
+    <div class="col-12"> 
+        <form class="navbar align-left" style="width: 100%;"> 
+            
+            <div class="form-row align-items-left">
+                <div style="width: 100%;">
+                    <h2>Gallup - hallintapaneeli</h2>
+                </div>
+                <div>
+                    <button routerLink ="/new" class="btn btn-primary m-1">Lisää uusi kysely</button>
+                </div>
+                <div>
+                    <button routerLink ="/questions" class="btn btn-primary m-1">Hallitse kyselyitä</button>
+                </div>
+
+                <div class="col-auto">
+                    <button routerLink ="/" class="btn btn-primary m-1">Kirjaudu ulos</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 
-    <div class="right-col d-flex justify-content-center"> <!-- right-col -->
-
-        <ul class="list-group">
-            <li class="list-group-item">/gallup will return JSON</li>
-            <li class="list-group-item">/answer will take .POST &#123; 'question_id' : INT, 'answer' : STRING &#125;</li>
-            <li class="list-group-item">/status will return the voting situation &#123;answer1: INT,answer2: INT,answer3: INT&#125;</li>
-            <li class="list-group-item">/allquestions</li>
-            <li class="list-group-item">/allanswers</li>
-            <li class="list-group-item"><a href="http://miettii.net/juoja/testpage"></a></li>
-            <li class="list-group-item"><img src="..\assets\images\sample3.PNG"></li>
-            <li class="list-group-item"><img src="..\assets\images\sample1.PNG"></li>
-            <li class="list-group-item"><img src="..\assets\images\sample2.PNG"></li>
-        </ul>
-            
 </div>
+<div class="row">
+
+    <div class="col-12"> <!-- right-col -->
+
+            <ul class="list-group">
+                <li class="list-group-item">/gallup will return JSON</li>
+                <li class="list-group-item">/answer will take .POST &#123; 'question_id' : INT, 'answer' : STRING &#125;</li>
+                <li class="list-group-item">/status will return the voting situation &#123;answer1: INT,answer2: INT,answer3: INT&#125;</li>
+                <li class="list-group-item">/allquestions</li>
+                <li class="list-group-item">/allanswers</li>
+                <li class="list-group-item"><a href="http://miettii.net/juoja/testpage">Mallisivu!</a></li>
+                <li class="list-group-item"><img src="assets\images\sample3.PNG"></li>
+                <li class="list-group-item"><img src="assets\images\sample4.PNG"></li>
+                <li class="list-group-item"><img src="assets\images\sample1.PNG"></li>
+                <li class="list-group-item"><img src="assets\images\sample2.PNG"></li>
+            </ul>
+                
+    </div>
 </div>

@@ -14,12 +14,14 @@ import { QuestionComponent } from './question/question.component';
 import { LoggedComponent } from './logged/logged.component';
 import { NewComponent } from './new/new.component';
 
+
 const route : Routes = [{
   path : "",
   component : HomeComponent
 },{
   path : "new",
   component : NewComponent,
+  canActivate : [CanActivateRouteService]
   
 },{
   path : "logged",
@@ -27,7 +29,8 @@ const route : Routes = [{
   canActivate : [CanActivateRouteService]
 },{
   path : "questions",
-  component : QuestionComponent
+  component : QuestionComponent,
+  canActivate : [CanActivateRouteService]
 }];
 
 @NgModule({

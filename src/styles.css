@@ -2,25 +2,31 @@
 
 html, body {
     height: 100%;
+    background-color: rgb(75, 80, 80);
 }
 
 .row {
-    height: 100%;
+    min-width:  440px;
     margin: 0;
+    margin-top: 10px;
     padding: 0;
 }
 
-.right-col {
-    background-color: rgb(49, 123, 126);
+.navbar {
+    background-color: rgb(36, 37, 37);
     padding: 10px;
     padding-top: 30px;
 }
 
-.left-col {
-    background-color: rgb(47, 95, 97);
-    padding-left: 10px;
-    padding-top: 20px;
+img{
+    max-width: 100%;
 }
+h2{
+    color: yellow;
+}
+
+
+
 
 @media all and (min-width:1000px){
     
@@ -35,40 +41,19 @@ html, body {
         width: 20%;
         overflow: auto;
     }
-    img{
-        max-width: 760px;
-    }
+
   }
 
 
 @media all and (min-width:760px) and (max-width:1000px){
-  
-    .right-col {
-        max-width: 760px
-    }
-    
-    .left-col {
-        height: 40%;
-        width: 100%;
-    }
 
-    img{
-        max-width: 760px;
-    }
   }
 
 @media all and (max-width:760px){
-    .right-col {
-        max-width: 760px;
+
+    input{
+        margin-bottom:10px;
     }
 
-    .left-col {
-        height: 40%;
-        width: 100%;
-        max-width: 760px
-    }
-    img{
-        max-width: 400px;
-    }
   }
 

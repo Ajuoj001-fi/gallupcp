@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class GalluplistService {
-
+  public isCollapsed = true;
   gallups : Gallup[];
 
   constructor(private http : HttpClient, private auth : AuthService, private cookieService : CookieService, private router : Router) { }
