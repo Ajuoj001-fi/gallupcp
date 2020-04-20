@@ -1,3 +1,7 @@
+# Info:  
+http://miettii.net/juoja/gallupcp/  
+ylläpitosivu, sisältää esimerkin komponentistä millä voidaan lisätä omille sivuille äänestys  
+
 # Gallupcp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
